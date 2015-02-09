@@ -25,26 +25,18 @@
 <link href="assets/css/bootstrap.css" rel="stylesheet">
 <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
 <link href="assets/css/docs.css" rel="stylesheet">
-<link href="assets/css/bootstrap-timepicker.css" rel="stylesheet">
-<link href="assets/css/bootstrap-timepicker.min.css" rel="stylesheet">
-<link href="assets/css/bootstrap-datetimepicker.min.css"
-	rel="stylesheet">
 <link href="assets/js/google-code-prettify/prettify.css"
 	rel="stylesheet">
 
-<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
-<!--[if lt IE 9]>
-      <script src="assets/js/html5shiv.js"></script>
-    <![endif]-->
+<link href="assets/css/datatable.css" rel="stylesheet">
+		
 <script src="assets/js/html5shiv.js"></script>
-<!-- Le fav and touch icons -->
-<!-- Fav and touch icons -->
+<script src="assets/js/jquery.js"></script>
 
 
 <link rel="shortcut icon" href="assets/ico/favicon.ico">
 <link rel="icon" sizes="16x16 32x32 64x64" href="assets/ico/favicon.ico">
-<link rel="icon" type="image/png" sizes="196x196"
-	href="assets/ico/favicon-196.png">
+<link rel="icon" type="image/png" sizes="196x196" href="assets/ico/favicon-196.png">
 <link rel="icon" type="image/png" sizes="160x160"
 	href="assets/ico/favicon-160.png">
 <link rel="icon" type="image/png" sizes="96x96"
@@ -112,20 +104,14 @@ body {
 		<div class="navbar-inner">
 			<div class="container-fluid">
 				<p class="nav navbar-text pull-left">
-					<font size="4" color="">Jio Ecg</font> <font size="4"
-						style="color: black; margin-left: 500px; bottom-padding: 0px;">Admin</font>
+					<font size="4" color="">Jio Ecg</font> <font size="4" style="color: black; margin-left: 500px; bottom-padding: 0px;">Admin</font>
 
-					<!-- 
-		        <div class="nav navbar-text pull-center ">
-		           <p class="nav navbar-text pull-center" align="center"> <font size="4" color="" >Admin</font>	           
-		            </div>
-		         -->
-				<div class="nav-collapse collapse">
-					<p class="nav navbar-text pull-right  ">
-						Logged in As <a href="#" class="navbar-link"><%=session.getAttribute("EName")%></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-						<a href="out.jsp" class="navbar-link">Log Out</a>
-					</p>
-				</div>
+					<div class="nav-collapse collapse">
+						<p class="nav navbar-text pull-right  ">
+							Logged in As <a href="#" class="navbar-link"><%=session.getAttribute("EName")%></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							<a href="out.jsp" class="navbar-link">Log Out</a>
+						</p>
+					</div>
 			</div>
 		</div>
 	</div>
@@ -137,12 +123,9 @@ body {
 	<div class="row-fluid">
 		<div class="span3 bs-docs-sidebar ">
 			<ul class="nav nav-list bs-docs-sidenav ">
-				<li><a href="ecgviewer.jsp"><i class="icon-chevron-right"></i>ECG
-						Results</a></li>
-				<li><a href="registration.jsp"><i
-						class="icon-chevron-right"></i>Register Clinic</a></li>
-				<li class="active"><a href="#"><i
-						class="icon-chevron-right"></i>Registered Clinic</a></li>
+				<li><a href="ecgviewer.jsp"><i class="icon-chevron-right"></i>ECG Results</a></li>
+				<li><a href="registration.jsp"><i class="icon-chevron-right"></i>Register Clinic</a></li>
+				<li class="active"><a href="#"><i class="icon-chevron-right"></i>Registered Clinic</a></li>
 
 
 			</ul>
@@ -255,7 +238,7 @@ function popout() {
 	</div>
 	
 
-	<div id="lightboxform" class="modal hide fade modal-lg modal-sm" tabindex="-1" data-width="" style=" font-size:13px;margin-top:50px;">
+	<div id="lightboxform" class="ecgmodal hide fade modal-lg modal-sm" tabindex="-1" data-width="" style=" font-size:13px;margin-top:50px;">
 		<div class="modal-header">
 			<button type="button" class="close" aria-hidden="true" onclick="modalclose()">x</button>
 			<h3>Ecg Results</h3>
@@ -462,10 +445,16 @@ function popout() {
 	<!--/.fluid-container-->
 
 
-	<script type="text/javascript"
-		src="http://platform.twitter.com/widgets.js"></script>
-	<script src="assets/js/jquery.js"></script>
-	<script src="assets/js/bootstrap-transition.js"></script>
+	<script>
+$(document).ready(function(){
+    $('#myTable').dataTable();
+});
+</script>
+	
+	<script src="assets/js/sorttable.js"></script>
+
+	    
+	<script src="assets/js/datatable.js"></script>
 	<script src="assets/js/bootstrap-alert.js"></script>
 	<script src="assets/js/bootstrap-modal.js"></script>
 	<script src="assets/js/bootstrap-dropdown.js"></script>
@@ -476,15 +465,8 @@ function popout() {
 	<script src="assets/js/bootstrap-button.js"></script>
 	<script src="assets/js/bootstrap-collapse.js"></script>
 	<script src="assets/js/bootstrap-carousel.js"></script>
-	<script src="assets/js/bootstrap-typeahead.js"></script>
-	<script src="assets/js/bootstrap-affix.js"></script>
-	<script src="assets/js/bootstrap-timepicker.js"></script>
-	<script src="assets/js/bootstrap-timepicker.min.js"></script>
-	<script src="assets/js/holder/holder.js"></script>
 	<script src="assets/js/google-code-prettify/prettify.js"></script>
 	<script src="assets/js/bootbox.min.js"></script>
-	<script src="assets/js/bootstrap-datetimepicker.min.js"></script>
-	<!-- <script src="assets/js/bootstrap-modal.js"></script> -->
 	<script type="text/javascript">
 	function editcliniccall(){
 		

@@ -20,8 +20,8 @@ import org.codehaus.jettison.json.JSONObject;
 public class HttpsWSCall {
 
 	// String prodURL = "https://49.40.4.171/jioecg_1401/rest/jioecg/";
-	String serverURL = "https://localhost/jioecg_1401/rest/jioecg/";
-	//String localhostURL = "http://localhost:8080/jioecg_1401/rest/jioecg/";
+	//String serverURL = "https://localhost/jioecg_1401/rest/jioecg/";
+	String localhostURL = "http://localhost:8080/jioecg_1401/rest/jioecg/";
 
 	HttpsTestClient secureClient = new HttpsTestClient();
 	String response = "";
@@ -56,7 +56,7 @@ public class HttpsWSCall {
 
 		try {
 
-			String path = serverURL + "updateclinicinformation?clinic_id="
+			String path = localhostURL + "updateclinicinformation?clinic_id="
 					+ URLEncoder.encode(clinic_id) + "&organisation_name="
 					+ URLEncoder.encode(organisation_name)
 					+ "&organisation_head="
@@ -84,7 +84,7 @@ public class HttpsWSCall {
 			throws JSONException {
 
 		try {
-			String path = serverURL + "weblogin?clinic_id=" + clinic_id
+			String path = localhostURL + "weblogin?clinic_id=" + clinic_id
 					+ "&password=" + passwoord;
 			response = HttpsTestClient.getHttpsServiceCallResponse(path);
 			data = secureClient.ConvertResponseToJSONObject(response);
@@ -102,7 +102,7 @@ public class HttpsWSCall {
 			String organisation_name) throws JSONException {
 
 		try {
-			String path = serverURL + "deviceregistration?device_id="
+			String path = localhostURL + "deviceregistration?device_id="
 					+ device_id + "&device_name=" + device_name
 					+ "&device_status=" + device_status + "&clinic_id="
 					+ clinic_id + "&organisation_name=" + organisation_name
@@ -131,7 +131,7 @@ public class HttpsWSCall {
 		JSONArray array = new JSONArray();
 		org.json.simple.JSONObject data = new org.json.simple.JSONObject();
 		try {
-			String path = serverURL + "clinicdata?clinic_id=" + clinic_id
+			String path = localhostURL + "clinicdata?clinic_id=" + clinic_id
 					+ "&user_type=" + user_type + "";
 			response = HttpsTestClient.getHttpsServiceCallResponse(path);
 			Map<String, String> datamap = new HashMap<String, String>();
@@ -196,7 +196,7 @@ public class HttpsWSCall {
 
 		try {
 			System.out.println(user_type);
-			String path = serverURL + "clinicregistration?clinic_id="
+			String path = localhostURL + "clinicregistration?clinic_id="
 					+ URLEncoder.encode(clinic_id) + "&password="
 					+ URLEncoder.encode(password) + "&organisation_name="
 					+ URLEncoder.encode(organisation_name)
@@ -225,7 +225,7 @@ public class HttpsWSCall {
 		JSONArray array = new JSONArray();
 
 		try {
-			String path = serverURL + "devicedata?clinic_id=" + clinic_id + "";
+			String path = localhostURL + "devicedata?clinic_id=" + clinic_id + "";
 			response = HttpsTestClient.getHttpsServiceCallResponse(path);
 			Map<String, String> datamap = new TreeMap<String, String>();
 			String line = response;
@@ -272,7 +272,7 @@ public class HttpsWSCall {
 			throws JSONException {
 
 		try {
-			String path = serverURL + "forgotpassword?clinic_id=" + clinic_id
+			String path = localhostURL + "forgotpassword?clinic_id=" + clinic_id
 					+ "";
 			response = HttpsTestClient.getHttpsServiceCallResponse(path);
 
@@ -300,7 +300,7 @@ public class HttpsWSCall {
 
 		JSONArray array = new JSONArray();
 		try {
-			String path = serverURL + "regclinic";
+			String path = localhostURL + "regclinic";
 			response = HttpsTestClient.getHttpsServiceCallResponse(path);
 			Map<String, String> datamap = new TreeMap<String, String>();
 			String line = response;
@@ -352,7 +352,7 @@ public class HttpsWSCall {
 
 		String line = "";
 		try {
-			String path = serverURL + "activatedeactivate?clinic_id="
+			String path = localhostURL + "activatedeactivate?clinic_id="
 					+ clinic_id + "&device_id=" + device_id + "&device_status="
 					+ device_status;
 			response = HttpsTestClient.getHttpsServiceCallResponse(path);
@@ -374,7 +374,7 @@ public class HttpsWSCall {
 
 		try {
 
-			String path = serverURL + "updatedeviceinfo?device_name="
+			String path = localhostURL + "updatedeviceinfo?device_name="
 					+ URLEncoder.encode(device_name) + "&device_id="
 					+ device_id + "&device_status=" + device_status
 					+ "&clinic_id=" + clinic_id;
@@ -393,7 +393,7 @@ public class HttpsWSCall {
 		JSONObject data1 = new JSONObject();
 		String line = "";
 		try {
-			String path = serverURL + "testcount?clinic_id=" + clinic_id;
+			String path = localhostURL + "testcount?clinic_id=" + clinic_id;
 			response = secureClient.getHttpsServiceCallResponse(path);
 			data = secureClient.ConvertResponseToJSONObject(response);
 			data1.put("count", data.get("count"));
@@ -411,7 +411,7 @@ public class HttpsWSCall {
 		org.json.simple.JSONObject data = new org.json.simple.JSONObject();
 		String line = "";
 		try {
-			String path = serverURL + "deletedevice?clinic_id=" + clinic_id
+			String path = localhostURL + "deletedevice?clinic_id=" + clinic_id
 					+ "&device_id=" + device_id;
 
 			response = HttpsTestClient.getHttpsServiceCallResponse(path);
@@ -429,7 +429,7 @@ public class HttpsWSCall {
 		JSONObject json = new JSONObject();
 		String line = "";
 		try {
-			String path = serverURL + "editclinic?clinic_id="
+			String path = localhostURL + "editclinic?clinic_id="
 					+ clinic_id;
 			response = HttpsTestClient.getHttpsServiceCallResponse(path);
 			data = secureClient.ConvertResponseToJSONObject(response);
