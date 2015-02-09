@@ -15,7 +15,6 @@
 	 
 	<head>
 	    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">    
-	    <script src="assets/js/jquery.js"></script>
 	    
 	    <meta charset="utf-8">
 	    <title>ECG Viewer</title>
@@ -27,12 +26,9 @@
 	     <link href="assets/css/bootstrap.css" rel="stylesheet">
 	    <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
 	    <link href="assets/css/docs.css" rel="stylesheet">
-	    <link href="assets/css/bootstrap-timepicker.css" rel="stylesheet">
-	    <link href="assets/css/bootstrap-timepicker.min.css" rel="stylesheet">
-	    <link href="assets/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
-	    <link href="assets/js/google-code-prettify/prettify.css" rel="stylesheet">
-	<link href="assets/css/datatable.css" rel="stylesheet">
-	
+	    <link href="assets/css/datatable.css" rel="stylesheet">
+		<script src="assets/js/jquery.js"></script>
+	    
 	   
 	   
 <!-- Fav and touch icons -->
@@ -215,12 +211,7 @@
 	
 	%>
   
-       <%--  <script>
-function popout() {
-     window.open("<%= link %>", "ECG Result", "width=800, height=600");
-}
-</script> --%>  
-            
+             
           <tr>
      <td><%= clinic_id %></td>
 	<td><%= patient_id %></td>
@@ -235,12 +226,7 @@ function popout() {
 	<td class ="underline" ><a href="<%= link %>" onclick="window.open(this.href,'_blank');return false;">Click Here</a></td>
 	          </tr>
 	           
-	        <% }/* }
-	stmt.close();
-	res.close();
-	
-		con.close(); */
-	%>
+	        <% }%>
         </tbody>  
       </table>  
 	  </div>

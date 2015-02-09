@@ -1056,9 +1056,10 @@ input,
 button,
 select,
 textarea {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: normal;
-  line-height: 20px;
+  line-height: 25px;
+  height: 30px;
 }
 
 input,
@@ -1070,7 +1071,9 @@ textarea {
 
 label {
   display: block;
-  margin-bottom: 5px;
+  margin-bottom: 15px;
+  margin-left: 5px;
+ 
 }
 
 select,
@@ -1196,7 +1199,7 @@ input[type="file"] {
 }
 
 select {
-  width: 220px;
+  width: 80px;
   background-color: #ffffff;
   border: 1px solid #cccccc;
 }
@@ -1260,7 +1263,7 @@ textarea::-webkit-input-placeholder {
 .radio input[type="radio"],
 .checkbox input[type="checkbox"] {
   float: left;
-  margin-left: -20px;
+  margin-left:20px;
 }
 
 .controls > .radio:first-child,
@@ -5185,7 +5188,28 @@ color:black;
   opacity: 0.8;
   filter: alpha(opacity=80);
 }
-
+.ecgmodal{
+position: fixed;
+  top: 10%;
+  left: 50%;
+  z-index: 1050;
+  width: 660px;
+  margin-left: -280px;
+  background-color: #ffffff;
+  border: 1px solid #999;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  *border: 1px solid #999;
+  -webkit-border-radius: 6px;
+     -moz-border-radius: 6px;
+          border-radius: 6px;
+  outline: none;
+  -webkit-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+     -moz-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+  -webkit-background-clip: padding-box;
+     -moz-background-clip: padding-box;
+          background-clip: padding-box;
+}
 .modal {
   position: fixed;
   top: 10%;

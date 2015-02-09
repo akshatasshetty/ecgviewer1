@@ -193,33 +193,8 @@
         					date=datetime.substring(0,10);
         					time=datetime.substring(10,18); 
                	
-                
-	/* Class.forName("com.mysql.jdbc.Driver");
-	Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/jioecg","root","root");
-	Statement stmt=con.createStatement();
-	String cid1 = (String) session.getAttribute("Clinic_id1");
-	String sql="SELECT * from jioecg_upload where clinic_id = '"+cid1+"'";
-	ResultSet res = stmt.executeQuery(sql); */
-	%>
-
-<%/* while(res.next())
-	{
-		String clinic_id = res.getString("clinic_id");
-		String patient_name = res.getString("patient_name");
-		String patient_id = res.getString("patient_id");
-		String sex = res.getString("sex");
-		String age = res.getString("age");
-		String jio_id = res.getString("jio_id");
-		String contact_number = res.getString("contact_number");
-		String link = res.getString("linkdownload");
-		String datetime = res.getString("ecgtest_date"); */
-	%>    
-       <%--  <script>
-function popout() {
-     window.open("<%= link %>", "ECG Result", "width=800, height=600");
-}
-</script> --%>  
-            
+                	%>    
+                  
           <tr>
      <td><%= clinic_id %></td>
 	<td><%= patient_id %></td>
@@ -235,12 +210,7 @@ function popout() {
 	<td class ="underline" ><a href="<%= link %>" onclick="window.open(this.href,'_blank');return false;">Click Here</a></td>
 	          </tr>
 	           
-	        <% }/* }
-	stmt.close();
-	res.close();
-	
-		con.close(); */
-	%>
+	        <% }%>
         </tbody>  
       </table>  
 	  </div>
@@ -249,7 +219,7 @@ function popout() {
 	  <hr>
 	
 	      <div id="footer" class="container">
-	    <nav class="navbar navbar-default navbar-fixed-bottom">
+	    <nav class="navbar navbar-default navbar-fixed-bottom" >
 	        <div class="navbar-inner navbar-content-center">
 	            <p class="text-muted credit"><font color="#737CA1" size="3">&copy; Reliance Jio Cloud Health Project.</font></p>
 	        </div>
